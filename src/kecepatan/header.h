@@ -4,6 +4,8 @@ using namespace std;
 // Fungsi prototype
 // Fungsi utama
 double cariKecepatan(double, double);
+double carijarak(double, double);
+double hitung_waktu(double, double);
 
 // Fungsi konversi
 // Konversi waktu
@@ -21,3 +23,6 @@ double konversi_m_km(double);
 // Konversi kecepatan
 double kphToMps(double);
 double konversiMpsKeKmph(double);
+
+// Unit Test
+void unitTest();
