@@ -4,25 +4,25 @@ using namespace std;
 // Fungsi prototype
 // Fungsi utama
 double cariKecepatan(double, double);
-double carijarak(double, double);
-double hitung_waktu(double, double);
+double cariJarak(double, double);
+double cariWaktu(double, double);
 
 // Fungsi konversi
 // Konversi waktu
 double konversiSekonKeJam(double);
 double konversiSekonKeMenit(double);
-double konversi_jam_menit(double);
-double jam_detik(double);
-double menit_detik(double);
-double konversi_menit_jam(double);
+double konversiJamMenit(double);
+double konversiJamDetik(double);
+double konversiMenitDetik(double);
+double konversiMenitJam(double);
 
 // Konversi jarak
-double konversi_km_m(double);
-double konversi_m_km(double);
+double konversiKmKeM(double);
+double konversiMKeKm(double);
 
 // Konversi kecepatan
-double kphToMps(double);
-double konversiMpsKeKmph(double);
+double konversiKmpjKeMps(double);
+double konversiMpsKeKmpj(double);
 
 // Unit Test
 void unitTest();

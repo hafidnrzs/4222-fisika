@@ -7,15 +7,15 @@ double cariKecepatan(double jarak, double waktu)
     return hasil;
 }
 
-double carijarak(double kecepatan, double waktu)
+double cariJarak(double kecepatan, double waktu)
 {
     double hasil = kecepatan * waktu;
     return hasil;
 }
 
-double hitung_waktu(double km, double jam)
+double cariWaktu(double jarak, double kecepatan)
 {
-    double waktu = km / jam;
+    double waktu = jarak / kecepatan;
     return waktu;
 }
 
@@ -33,50 +33,50 @@ double konversiSekonKeMenit (double x)
     return hasil;
 }
 
-double konversi_jam_menit(double jam)
+double konversiJamMenit(double jam)
 {
     double menit = jam * 60;
     return menit;
 }
 
-double jam_detik(double jam)
+double konversiJamDetik(double jam)
 {
     jam = jam * 3600;
     return jam;   
 }
 
-double menit_detik(double menit)
+double konversiMenitDetik(double menit)
 {
     menit =menit * 60;
     return menit;   
 }
 
-double konversi_menit_jam(double menit)
+double konversiMenitJam(double menit)
 {
     double jam = menit / 60;
     return jam;
 }
 
 // Konversi jarak
-double konversi_km_m(double x)
+double konversiKmKeM(double x)
 {
     double hasil = x * 1000;
     return hasil;
 }
 
-double konversi_m_km(double x)
+double konversiMKeKm(double x)
 {
     double hasil = x / 1000;
     return hasil;
 }
 
 // Konversi kecepatan
-double kphToMps(double kph)
+double konversiKmpjKeMps(double kph)
 {
     return kph * 1000 / 3600;
 }
 
-double konversiMpsKeKmph(double mps)
+double konversiMpsKeKmpj(double mps)
 {
     double kmph = mps * 3.6;
     return kmph;
