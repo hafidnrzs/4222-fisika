@@ -6,17 +6,96 @@ void menuWaktu()
     double besaranJarak, besaranKecepatan;
 
     cout << "Program Mencari Waktu\n";
-    cout << "Diketahui jarak. Input satuan jarak (km atau m): ";
-    cin >> satuanJarak;
+    cout << "Diketahui jarak. ";
+    do
+    {
+        cout << "Input satuan jarak (km atau m): ";
+        cin >> satuanJarak;
+    }
+    while (satuanJarak != "km" && satuanJarak != "m");
     cout << "Input besaran jarak: ";
     cin >> besaranJarak;
 
-    cout << "Diketahui kecepatan. Input satuan kecepatan (km/j atau m/s): ";
-    cin >> satuanKecepatan;
+    cout << "Diketahui kecepatan. ";
+    do
+    {
+        cout << "Input satuan kecepatan (km/jam atau m/s): ";
+        cin >> satuanKecepatan;
+    }
+    while (satuanKecepatan != "km/jam" && satuanKecepatan != "m/s");
     cout << "Input besaran kecepatan: ";
     cin >> besaranKecepatan;
 
+    if (satuanJarak == "km")
+    {
+        besaranJarak = konversiKmKeM(besaranJarak);
+    }
+    if (satuanKecepatan == "km/j")
+    {
+        besaranKecepatan = konversiKmpjKeMps(besaranKecepatan);
+    }
     double hasil = cariWaktu(besaranJarak, besaranKecepatan);
+    string satuanWaktu = "s";
+    cout << "Hasil: " << hasil << " " << satuanWaktu << "\n";
 
-    cout << "Hasil: " << hasil << " m/s\n";
+    // Konversi hasil
+    int pilihKonversiWaktu;
+    do
+    {
+        if (satuanWaktu == "s")
+        {
+            cout << "1. Konversi ke jam\n";
+            cout << "2. Konversi ke menit\n";
+            cout << "0. Kembali ke menu utama\n";
+            cout << "Pilih menu: ";
+            cin >> pilihKonversiWaktu;
+            if (pilihKonversiWaktu == 1)
+            {
+                hasil = konversiSekonKeJam(hasil);
+                satuanWaktu = "jam";
+            }
+            else if (pilihKonversiWaktu == 2)
+            {
+                hasil = konversiSekonKeMenit(hasil);
+                satuanWaktu = "menit";
+            }
+        }
+        else if (satuanWaktu == "menit")
+        {
+            cout << "1. Konversi ke jam\n";
+            cout << "2. Konversi ke sekon\n";
+            cout << "0. Kembali ke menu utama\n";
+            cout << "Pilih menu: ";
+            cin >> pilihKonversiWaktu;
+            if (pilihKonversiWaktu == 1)
+            {
+                hasil = konversiMenitJam(hasil);
+                satuanWaktu = "jam";
+            }
+            else if (pilihKonversiWaktu == 2)
+            {
+                hasil = konversiMenitDetik(hasil);
+                satuanWaktu = "s";
+            }
+        }
+        else if (satuanWaktu == "jam")
+        {
+            cout << "1. Konversi ke menit\n";
+            cout << "2. Konversi ke sekon\n";
+            cout << "0. Kembali ke menu utama\n";
+            cout << "Pilih menu: ";
+            cin >> pilihKonversiWaktu;
+            if (pilihKonversiWaktu == 1)
+            {
+                hasil = konversiJamMenit(hasil);
+                satuanWaktu = "menit";
+            }
+            else if (pilihKonversiWaktu == 2)
+            {
+                hasil = konversiJamDetik(hasil);
+                satuanWaktu = "s";
+            }
+        }
+        cout << "Hasil: " << hasil << " " << satuanWaktu << "\n";
+    } while (pilihKonversiWaktu != 0);   
 }
