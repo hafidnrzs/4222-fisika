@@ -5,7 +5,10 @@ void menuWaktu()
     string satuanJarak, satuanKecepatan;
     double besaranJarak, besaranKecepatan;
 
-    cout << "Program Mencari Waktu\n";
+    cout << "\n.-----------------------.\n";
+    cout << "  Program Mencari Waktu\n";
+    cout << "'-----------------------'\n";
+
     cout << "Diketahui jarak. ";
     do
     {
@@ -30,18 +33,19 @@ void menuWaktu()
     {
         besaranJarak = konversiKmKeM(besaranJarak);
     }
-    if (satuanKecepatan == "km/j")
+    if (satuanKecepatan == "km/jam")
     {
         besaranKecepatan = konversiKmpjKeMps(besaranKecepatan);
     }
     double hasil = cariWaktu(besaranJarak, besaranKecepatan);
     string satuanWaktu = "s";
-    cout << "Hasil: " << hasil << " " << satuanWaktu << "\n";
 
     // Konversi hasil
     int pilihKonversiWaktu;
     do
     {
+        cout << ".------------.\n";
+        cout << "  Hasil: " << hasil << " " << satuanWaktu << "\n";
         if (satuanWaktu == "s")
         {
             cout << "1. Konversi ke jam\n";
@@ -96,6 +100,5 @@ void menuWaktu()
                 satuanWaktu = "s";
             }
         }
-        cout << "Hasil: " << hasil << " " << satuanWaktu << "\n";
     } while (pilihKonversiWaktu != 0);   
 }

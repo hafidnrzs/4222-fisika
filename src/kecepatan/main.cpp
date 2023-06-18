@@ -1,15 +1,15 @@
 #include "header.h"
 
-// void menuKecepatan();
+void menuKecepatan();
 // void menuJarak();
 void menuWaktu();
 void menuUtama();
 
 int main()
 {
-    cout << "________________________________\n";
-    cout << "| Program Kalkulator Kecepatan |\n";
-    cout << "________________________________\n";
+    cout << ".--------------------------------.\n";
+    cout << "| Program Kalkulator Kecepatan   |\n";
+    cout << "'--------------------------------'\n";
 
     int pilihMain;
     do
@@ -19,7 +19,7 @@ int main()
         cin >> pilihMain;
         if (pilihMain == 1)
         {
-            // menuKecepatan();
+            menuKecepatan();
         }
         else if (pilihMain == 2)
         {
@@ -39,16 +39,17 @@ int main()
         }
     }
     while (pilihMain != 0);
-    
-    // unitTest();
+
     return 0;
 }
 
 void menuUtama()
 {
-    cout << "Menu:\n";
-    cout << "1. Mencari kecepatan\n";
-    cout << "2. Mencari jarak\n";
-    cout << "3. Mencari waktu\n";
-    cout << "0. Keluar program\n";
+    cout << "\n.---------------------.\n";
+    cout << "  Menu:\n";
+    cout << "  1. Mencari kecepatan\n";
+    cout << "  2. Mencari jarak\n";
+    cout << "  3. Mencari waktu\n";
+    cout << "  0. Keluar program\n";
+    cout << "'---------------------'\n";
 }
