@@ -3,9 +3,8 @@
 void menuKecepatan();
 // void menuJarak();
 void menuWaktu();
-void menuUtama();
 
-int main()
+void menuUtama()
 {
     cout << ".--------------------------------.\n";
     cout << "| Program Kalkulator Kecepatan   |\n";
@@ -14,7 +13,13 @@ int main()
     int pilihMain;
     do
     {
-        menuUtama();
+        cout << "\n.---------------------.\n";
+        cout << "  Menu:\n";
+        cout << "  1. Mencari kecepatan\n";
+        cout << "  2. Mencari jarak\n";
+        cout << "  3. Mencari waktu\n";
+        cout << "  0. Keluar program\n";
+        cout << "'---------------------'\n";
         cout << "Pilih menu: ";
         cin >> pilihMain;
         if (pilihMain == 1)
@@ -39,17 +44,4 @@ int main()
         }
     }
     while (pilihMain != 0);
-
-    return 0;
-}
-
-void menuUtama()
-{
-    cout << "\n.---------------------.\n";
-    cout << "  Menu:\n";
-    cout << "  1. Mencari kecepatan\n";
-    cout << "  2. Mencari jarak\n";
-    cout << "  3. Mencari waktu\n";
-    cout << "  0. Keluar program\n";
-    cout << "'---------------------'\n";
 }

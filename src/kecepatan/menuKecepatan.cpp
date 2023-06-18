@@ -21,7 +21,7 @@ void menuKecepatan()
         cout << "Diketahui waktu. Input satuan waktu (jam atau menit atau detik): ";
         cin >> satuanWaktu;
     } while (satuanWaktu != "jam" && satuanWaktu != "menit" && satuanWaktu != "detik");
-    cout << "Input besaran kecepatan: ";
+    cout << "Input besaran waktu: ";
     cin >> besaranWaktu;
 
     if (satuanJarak == "km")
