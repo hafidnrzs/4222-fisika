@@ -24,5 +24,7 @@ double konversiMKeKm(double);
 double konversiKmpjKeMps(double);
 double konversiMpsKeKmpj(double);
 
-// Unit Test
-void unitTest();
+// Menu
+void menuKecepatan();
+void menuJarak();
+void menuWaktu();

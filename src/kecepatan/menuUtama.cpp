@@ -1,9 +1,5 @@
 #include "header.h"
 
-void menuKecepatan();
-// void menuJarak();
-void menuWaktu();
-
 void menuUtama()
 {
     cout << ".--------------------------------.\n";
@@ -28,7 +24,7 @@ void menuUtama()
         }
         else if (pilihMain == 2)
         {
-            // menuJarak();
+            menuJarak();
         }
         else if (pilihMain == 3)
         {
