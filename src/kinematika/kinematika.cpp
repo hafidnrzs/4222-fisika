@@ -1,26 +1,40 @@
-
+// import libary
 #include <iostream>
-#include <cmath>
+// fungsi namespcae
 using namespace std;
 
-void kinematika()
+int main()
 {
     double x0, v0, a, t, fuel, fuelEfficiency, cc;
     cout << endl;
     cout << "-----== Program Gerak Kinematik ==-----" << endl;
 
-    cout << "Masukkan posisi awal mobil(km): ";
+    cout << "Masukkan posisi awal mobil(km)         : ";
     cin >> x0;
-    cout << "Masukkan kecepatan awal mobil(km/h): ";
+    cout << "Masukkan kecepatan awal mobil(km/h)    : ";
     cin >> v0;
-    cout << "Masukkan percepatan mobil(km/h^2): ";
+    cout << "Masukkan percepatan mobil(km/h^2)      : ";
     cin >> a;
-    cout << "Masukkan lama mobil bergerak (h): ";
+    cout << "Masukkan lama mobil bergerak (h)       : ";
     cin >> t;
-    cout << "Masukkan jumlah bahan bakar (L): ";
+    cout << "Masukkan jumlah bahan bakar (L)        : ";
     cin >> fuel;
-    cout << "Masukkan kapasitas mesin: ";
-    cin >> cc;
+
+    bool validInput = false;
+    do
+    {
+        cout << "Masukkan kapasitas mesin (0-3000 CC)   : ";
+        cin >> cc;
+        if (cc >= 0 && cc <= 3000)
+        {
+            validInput = true;
+        }
+        else
+        {
+            cout << "Input tidak valid. Silakan coba lagi." << endl;
+        }
+
+    } while (!validInput);
 
     cout << endl;
 
@@ -48,10 +62,6 @@ void kinematika()
     {
         fuelEfficiency = 5;
     }
-    else
-    {
-        cout << "diluar nalar" << endl;
-    }
 
     double xt = x0 + v0 * t + 0.5 * a * t * t;
     double vt = v0 + a * t;
@@ -60,12 +70,12 @@ void kinematika()
     double remain = fuel - sum;
     double range = distance - xt;
 
-    cout << "Posisi akhir mobil setelah " << t << " jam adalah : " << xt << " Km" << endl;
-    cout << "Kecepatan akhir mobil setelah " << t << " jam adalah : " << vt << " Km/H" << endl;
-    cout << "Perkiraan jarak tempuh dengan bahan bakar yang tersedia adalah : " << distance << " Km" << endl;
-    cout << "jumlah bahan bakar yang diperlukan selama " << t << " jam adalah : " << sum << " L " << endl;
-    cout << "Sisa bahan bakar setelah menempuh jarak " << distance << " Km adalah " << remain << " L " << endl;
-    cout << "Perkiraan jarak yang dapat ditempuh lagi sampai bensin habis adalah :  " << range << " Km " << endl;
+    cout << "Posisi akhir mobil setelah " << t << " jam adalah " << xt << " Km" << endl;
+    cout << "Kecepatan akhir mobil setelah " << t << " jam adalah " << vt << " Km/H" << endl;
+    cout << "Perkiraan jarak tempuh dengan bahan bakar yang tersedia adalah " << distance << " Km" << endl;
+    cout << "jumlah bahan bakar yang diperlukan selama " << t << " jam adalah " << sum << " L " << endl;
+    cout << "Sisa bahan bakar setelah menempuh jarak " << xt << " Km adalah " << remain << " L " << endl;
+    cout << "Perkiraan jarak yang dapat ditempuh lagi sampai bensin habis adalah " << range << " Km " << endl;
 
-    return;
+    return 0;
 }
