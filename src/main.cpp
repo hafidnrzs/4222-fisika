@@ -11,13 +11,13 @@ int main()
     {
         cout << "\n.-------------------.\n";
         cout << " Menu:\n";
-        cout << " 1. KELOMPOK 1\n";
-        cout << " 2. KELOMPOK 2\n";
-        cout << " 3. KELOMPOK 3\n";
-        cout << " 4. KELOMPOK 4\n";
-        cout << " 5. KELOMPOK 5\n";
-        cout << " 6. KELOMPOK 6\n";
-        cout << " 7. KELOMPOK 7\n";
+        cout << " 1. KELOMPOK 1 - Hukum Newton 1\n";
+        cout << " 2. KELOMPOK 2 - Hukum Newton 2\n";
+        cout << " 3. KELOMPOK 3 - Hukum Newton 3\n";
+        cout << " 4. KELOMPOK 4 - Kinematika\n";
+        cout << " 5. KELOMPOK 5 - Kecepatan\n";
+        cout << " 6. KELOMPOK 6 - Energi Mekanik\n";
+        cout << " 7. KELOMPOK 7 - Momentum\n";
         cout << " 0. Keluar program\n";
         cout << "'-------------------'\n";
         cout << "Pilih menu: ";
@@ -58,6 +58,11 @@ int main()
         else
         {
             cout << "Input Anda salah! Masukkan menu 1 - 7 atau 0 untuk keluar\n";
+        }
+
+        if (keluarProgram() == 'y')
+        {
+            return 0;
         }
     } while (pilihMain != 0);
 }

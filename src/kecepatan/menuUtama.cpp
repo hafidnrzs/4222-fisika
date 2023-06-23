@@ -1,6 +1,6 @@
 #include "header.h"
 
-void menuUtama()
+void kecepatan()
 {
     cout << ".--------------------------------.\n";
     cout << "| Program Kalkulator Kecepatan   |\n";
