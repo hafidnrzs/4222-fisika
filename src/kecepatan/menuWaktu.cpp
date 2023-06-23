@@ -14,6 +14,7 @@ void menuWaktu()
     {
         cout << "Input satuan jarak (km atau m): ";
         cin >> satuanJarak;
+        cin.ignore();
     }
     while (satuanJarak != "km" && satuanJarak != "m");
     cout << "Input besaran jarak: ";
@@ -24,6 +25,7 @@ void menuWaktu()
     {
         cout << "Input satuan kecepatan (km/jam atau m/s): ";
         cin >> satuanKecepatan;
+        cin.ignore();
     }
     while (satuanKecepatan != "km/jam" && satuanKecepatan != "m/s");
     cout << "Input besaran kecepatan: ";
