@@ -3,7 +3,7 @@
 // fungsi namespcae
 using namespace std;
 
-int main()
+void kinematika()
 {
     double x0, v0, a, t, fuel, fuelEfficiency, cc;
     cout << endl;
@@ -77,5 +77,5 @@ int main()
     cout << "Sisa bahan bakar setelah menempuh jarak " << xt << " Km adalah " << remain << " L " << endl;
     cout << "Perkiraan jarak yang dapat ditempuh lagi sampai bensin habis adalah " << range << " Km " << endl;
 
-    return 0;
+    return;
 }
