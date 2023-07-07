@@ -25,9 +25,10 @@ public:
 
     void cekPerbedaan(const string &situasi, double waktu, double sudutKemiringan)
     {
-        double percepatan = (gaya - massa * 9.8 * sin(sudutKemiringan)) / massa;
+        double sudutRad = sudutKemiringan * M_PI / 180.0;
+        double percepatan = (gaya * cos(sudutRad) - massa * 9.8 * sin(sudutRad)) / massa;
         kecepatan += percepatan * waktu;
-        double posisi = 0.5 * percepatan * waktu * waktu;
+        double posisi = 0.5 * percepatan * waktu * waktu; // Perbaikan perhitungan posisi
 
         cout << "Situasi: " << situasi << endl;
         cout << "Massa kendaraan: " << massa << " kg" << endl;
@@ -73,7 +74,7 @@ void hukumNewton1()
     cout << "Masukkan waktu (detik): ";
     cin >> waktu;
 
-    cout << " " << endl;
+    cout << endl;
 
     trukA.cekPerbedaan("Truk A melewati jalan lurus", waktu, sudutKemiringanA);
     trukB.cekPerbedaan("Truk B melewati jalan menanjak", waktu, sudutKemiringanB);
